@@ -1,0 +1,67 @@
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.profile-container{
+    padding-top: 5vh;
+    background-color: #f0f0f0;
+    width: 100vw;
+    height:90vh;
+}
+
+.profile{
+    display: flex;
+    margin: 1vh 15vw 1vh 15vw;
+}
+
+.left-container{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-right: 1vw;
+    width: 25%;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.right-container{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    width:75%;
+}
+
+.left-line{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.user-inf{
+    width: 90%;
+    box-sizing: border-box;
+    margin-left: 2.5vw;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.right-container form p {
+    margin-left: 2.5vw;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.update{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: #B78A28;
+    color: white;
+    margin-left: 83.2%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 12vh;
+}

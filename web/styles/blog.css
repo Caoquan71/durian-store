@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&family=Shadows+Into+Light&display=swap");
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.blog-container {
+    width: 63%;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    margin-right: 16vh;
+    padding: 10px;
+    background: white;
+    min-height: 85vh;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.side-bar {
+    width: 17%;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    margin-left: 16vh;
+    height: 30vh;
+    position: sticky;
+    top: 10px;
+    background: white;
+}
+
+.side-bar .category {
+    list-style: none;
+}
+
+.side-bar .category a li:hover {
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.side-bar .category a li {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.blog-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card{
+    display: flex;
+}
+
+.img-container{
+    width: 300px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.blog-title{
+    width: 80%;
+    position: relative;
+}
+
+
+.profile {
+    position: relative;
+    right: 44.5%;
+    bottom: -70px;
+    ;
+}
+
+.date{
+    width: 30%;
+    position: relative;
+    right: 51%;
+    bottom: -100px;
+    ;
+}
+
+a button{
+    padding: 10px;
+    color: white;
+    background-color: pink;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+.blog-container a{
+    position: relative;
+    right: 56%;
+    bottom: -68px;
+}
+
+.blog-container a button:hover{
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+/* your styles go here */
+#footer-main {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-nav li a {
+  color: black;
+  text-transform: uppercase;
+}
+
+.footer-nav {
+  display: flex;
+}

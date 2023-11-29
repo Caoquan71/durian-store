@@ -1,0 +1,24 @@
+#related-title {
+  margin: 10vh 0 5vh 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content-img-container a img {
+  width: 190px;
+  height: 257px;
+}
+
+.content-img-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 10vw 0 10vw;
+  text-align: center;
+}
+
+.img-text {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}

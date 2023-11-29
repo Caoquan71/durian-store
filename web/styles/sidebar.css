@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&family=Shadows+Into+Light&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* set color */
+  --body-color: #e4e9f7;
+  --siderbar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+  --border-color: rgba(77, 76, 76, 0.2);
+
+  /* Transition */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+body {
+  background-color: var(--body-color);
+  height: 100vh;
+  transition: var(--tran-05);
+}
+
+body.dark {
+  --body-color: #18191a;
+  --siderbar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+  --border-color: rgba(241, 237, 237, 0.2);
+}
+
+/* REUSABLE CSS */
+
+/* SIDE BAR CSS */
+.sidebar header {
+  position: relative;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  padding: 10px 14px;
+  background-color: var(--siderbar-color);
+  z-index: 100;
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar .text {
+  transition: var(--tran-02);
+}
+
+.sidebar.close {
+  width: 88px;
+}
+
+.sidebar.close .text {
+  opacity: 0;
+}
+
+.sidebar .toggle {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  font-size: 25px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sidebar.close .toggle {
+  position: absolute;
+  top: 50%;
+  font-size: 25px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  right: 0.1px;
+}
+
+.sidebar li {
+  height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li .icon {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon,
+.logo a {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+  font-size: 20px;
+  color: var(--text-color);
+  transition: var(--tran-02);
+}
+
+.sidebar li a,
+.sidebar li .admin-submenu-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.sidebar li a:hover,
+.sidebar li .admin-submenu-item:hover {
+  background-color: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text,
+.sidebar li .admin-submenu-item:hover .icon,
+.sidebar li .admin-submenu-item:hover .text {
+  font-size: 20px;
+  color: var(--siderbar-color);
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text,
+body.dark .sidebar li .admin-submenu-item:hover .icon,
+body.dark .sidebar li .admin-submenu-item:hover .text {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.sidebar .menu-bar {
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom-content {
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 100px;
+  padding-top: 20px;
+}
+
+.menu-bar .mode {
+  background: var(--primary-color-light);
+  position: relative;
+  border-radius: 6px;
+  border-right: 1px solid var(--border-color);
+}
+.menu-bar .mode .moon-sun {
+  height: 50px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+.menu-bar .mode i {
+  position: absolute;
+  transition: var(--tran-03);
+}
+
+.menu-bar .mode i.sun {
+  opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+  opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+  opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+  right: 0;
+  position: absolute;
+  height: 100%;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggle-switch .switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--toggle-color);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: var(--siderbar-color);
+}
+
+body.dark .switch::before {
+  left: 24px;
+}
+
+/* Admin dropdown */
+.sidebar .admin {
+  position: relative;
+}
+.sidebar .admin-submenu-item .admin-dropdown {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -25px;
+}
+
+.trans-arrow .admin-dropdown {
+  transition: var(--tran-03);
+  top: 25% !important;
+  transform: rotate(90deg) !important;
+}
+
+.sidebar.close .admin-dropdown {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+
+.sidebar .sub-menu {
+  margin-left: 25px;
+  display: none;
+}
+
+.sidebar.close .sub-menu {
+  margin-left: 10px;
+  display: none;
+}
+
+.show-submenu {
+  display: block !important;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 73px;
+  }
+
+  .sidebar .logo {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar.close .logo {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar.close {
+    width: 250px;
+  }
+  .sidebar li a .nav-text,
+  .sidebar li .admin-submenu-item .nav-text {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .sidebar li .admin-submenu-item .admin-dropdown {
+    opacity: 0;
+  }
+  .sidebar.close li .admin-submenu-item .admin-dropdown {
+    opacity: 1;
+  }
+
+  .sidebar .sub-menu {
+    margin-left: 0;
+  }
+
+  .sidebar.close li a .nav-text,
+  .sidebar.close li .admin-submenu-item .nav-text {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  .bottom-content .mode-text {
+    opacity: 0;
+  }
+
+  .sidebar.close .bottom-content .mode-text {
+    opacity: 1;
+  }
+
+  .menu-bar .mode i {
+    position: absolute;
+    transition: var(--tran-03);
+  }
+
+  .sidebar header {
+    position: relative;
+  }
+  .sidebar .toggle {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    font-size: 25px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .sidebar.close .toggle {
+    position: absolute;
+    top: 50%;
+    font-size: 25px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    right: -100px;
+  }
+
+  .sidebar .bottom-content .mode .moon-sun .i {
+    opacity: 0;
+  }
+}

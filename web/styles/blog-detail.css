@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&family=Shadows+Into+Light&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+.blog-container {
+  width: 63%;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  margin-right: 16vh;
+  padding: 10px;
+  background: white;
+  min-height: 85vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.side-bar {
+  width: 17%;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  margin-left: 16vh;
+  height: 30vh;
+  position: sticky;
+  top: 10px;
+   background: white;
+}
+
+.side-bar .category {
+  list-style: none;
+}
+
+.side-bar .category a li:hover {
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.side-bar .category a li {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.blog-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.profile .p-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.profile .p-date {
+  font-size: 15px;
+}
+
+.sub-blog {
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.sub-content {
+  width: 100%;
+}
+
+.sub-blog .sub-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sub-content .img {
+  width: 100%;
+  margin: 5px 10px 5px 10px;
+}
+
+.sub-content .img img {
+  border-radius: 7px;
+}

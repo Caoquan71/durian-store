@@ -1,0 +1,419 @@
+
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.store-container{
+    padding-top: 5vh;
+    background-color: #f0f0f0;
+    width: 100vw;
+}
+
+.store-header{
+    background: white;
+    margin-left: 14vw;
+    width: 76%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.right-sort{
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    width: 52.8vw;
+    background-color: white;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-show{
+    margin: 2px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.bg-green{
+    background-color: #4CAF50;
+    color: #fff;
+}
+.bg-white{
+    background-color: white;
+}
+
+.card-container{
+    display: flex;
+    width: 70%;
+    padding: 0 14vw 0 14vw;
+    margin-top: 2vh;
+}
+
+.price-container{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-right: 1vw;
+}
+
+.img{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+.btn a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.btn a span {
+    position: absolute;
+    display: block;
+}
+
+
+
+.btn a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #b9bdbd);
+    animation: btn-anim1 1s linear infinite;
+}
+
+.btn a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #b9bdbd);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+.btn a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #b9bdbd);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+.btn a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #b9bdbd);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 70%;
+}
+
+.right-container{
+    padding: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 55vw;
+}
+
+.sellter-item{
+    width: 300px; /* Set the width of the container div */
+    height: auto; /* Set the height of the container div */
+    overflow: hidden; /* Hide any image overflow */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.filter-price {
+    width: 95%;
+    border: 0;
+    padding: 10px 10px 0px 10px;
+}
+
+.rangeValues{
+    padding: 10px;
+}
+
+.price-title {
+    color: black;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 400;
+    text-align: left;
+    border-bottom: 0.5px solid grey;
+    background: rgba(0,0,0,.03);
+    padding: 10px;
+}
+
+.price-field {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    border-radius: 3px;
+}
+.price-field input[type=range] {
+    position: absolute;
+}
+
+/* Reset style for input range */
+
+.price-field input[type=range] {
+    width: 12vw;
+    height: 2px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+/* Style toddler input range */
+
+.price-field input[type=range]::-webkit-slider-thumb {
+    /* WebKit/Blink */
+    position: relative;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-top: -4px;
+    background-color: #4CAF50;
+    cursor: pointer;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 100;
+}
+
+/* Style track input range */
+
+.price-field input[type=range]::-webkit-slider-runnable-track {
+    /* WebKit/Blink */
+    width: 188px;
+    height: 7px;
+    cursor: pointer;
+    background: #4CAF50;
+    border-radius: 5px;
+}
+
+.filter-color{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-right: 1vw;
+    margin-top: 1vh;
+}
+
+.color-title {
+    color: black;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 400;
+    text-align: left;
+    border-bottom: 0.5px solid grey;
+    background: rgba(0,0,0,.03);
+    padding: 10px;
+}
+
+.color-checkbox{
+    padding: 10px;
+}
+
+.color{
+    padding: 10px;
+}
+.hidden{
+    display: none;
+}
+.inline{
+    display: inline;
+}
+
+.filter-storage{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-right: 1vw;
+    margin-top: 1vh;
+}
+
+.storage-title {
+    color: black;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 400;
+    text-align: left;
+    border-bottom: 0.5px solid grey;
+    background: rgba(0,0,0,.03);
+    padding: 10px;
+}
+
+.storage-checkbox{
+    padding: 10px;
+}
+
+.storage{
+    padding: 10px;
+}
+
+.search-container{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center
+}
+
+.search-container input{
+    border-radius: 5px 0 0 5px;
+    margin-left: 10px;
+    outline: none;
+    border: 3px solid #00B4CC;
+}
+
+.search-container button{
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button{
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.pagination {
+    display: inline-block;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 56vw;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 20px;
+    padding: 5px;
+    text-align: center;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.disabled{
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+}
+
+
+
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+.sellter-item-text{
+    position: relative;
+}
+
+button.btn-sale{
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: white;
+    outline: none;
+    border: 0.5px solid black;
+}
+
+
+
+
